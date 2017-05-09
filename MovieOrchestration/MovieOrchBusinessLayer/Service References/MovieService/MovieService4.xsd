@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/MovieDataLayer.Enums" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/MovieDataLayer.Enums" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="Genre">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Thriller" />
+      <xs:enumeration value="Horror" />
+      <xs:enumeration value="Action" />
+      <xs:enumeration value="Adventure" />
+      <xs:enumeration value="Animation" />
+      <xs:enumeration value="Futuristic" />
+      <xs:enumeration value="Drama" />
+      <xs:enumeration value="FairyTale" />
+      <xs:enumeration value="Humor" />
+      <xs:enumeration value="Biography" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Genre" nillable="true" type="tns:Genre" />
+  <xs:simpleType name="Sex">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Male" />
+      <xs:enumeration value="Female" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Sex" nillable="true" type="tns:Sex" />
+</xs:schema>

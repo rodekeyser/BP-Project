@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2AD0B5AB-73D6-40A6-A8C9-47C582520CC0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MovieOrchBusinessLayer</RootNamespace>
+    <AssemblyName>MovieOrchBusinessLayer</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Csla, Version=4.6.500.0, Culture=neutral, PublicKeyToken=93be5fdc093e4c30, processorArchitecture=MSIL">
+      <HintPath>..\packages\CSLA-Core.4.6.500\lib\net45\Csla.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BusinessModel\AchievementToUser.cs" />
+    <Compile Include="BusinessModel\ActorToMovie.cs" />
+    <Compile Include="BusinessModel\CriteriaObjects\AchievementCriteria.cs" />
+    <Compile Include="BusinessModel\CriteriaObjects\ClientCriteria.cs" />
+    <Compile Include="BusinessModel\CriteriaObjects\StakeholderCriteria.cs" />
+    <Compile Include="BusinessModel\CriteriaObjects\MovieCriteria.cs" />
+    <Compile Include="BusinessModel\CriteriaObjects\RelationsCriteria.cs" />
+    <Compile Include="BusinessModel\CriteriaObjects\WatchlistCriteria.cs" />
+    <Compile Include="BusinessModel\DirectorToMovie.cs" />
+    <Compile Include="BusinessModel\MovieToWatchlist.cs" />
+    <Compile Include="BusinessModel\NamedLists\NamedAchievementList.cs" />
+    <Compile Include="BusinessModel\NamedLists\NamedActorList.cs" />
+    <Compile Include="BusinessModel\NamedLists\NamedAdminList.cs" />
+    <Compile Include="BusinessModel\NamedLists\NamedDirectorList.cs" />
+    <Compile Include="BusinessModel\NamedLists\NamedMovieList.cs" />
+    <Compile Include="BusinessModel\NamedLists\NamedUserList.cs" />
+    <Compile Include="BusinessModel\NamedLists\NamedWatchlistList.cs" />
+    <Compile Include="BusinessModel\NamedObjects\NamedAchievement.cs" />
+    <Compile Include="BusinessModel\NamedObjects\NamedActor.cs" />
+    <Compile Include="BusinessModel\NamedObjects\NamedAdmin.cs" />
+    <Compile Include="BusinessModel\NamedObjects\NamedDirector.cs" />
+    <Compile Include="BusinessModel\NamedObjects\NamedException.cs" />
+    <Compile Include="BusinessModel\NamedObjects\NamedMovie.cs" />
+    <Compile Include="BusinessModel\NamedObjects\NamedUser.cs" />
+    <Compile Include="BusinessModel\NamedObjects\NamedWatchlist.cs" />
+    <Compile Include="BusinessModel\ReadOnlyLists\NamedExceptionReadOnlyList.cs" />
+    <Compile Include="BusinessModel\UserToUser.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\MovieService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\UserService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="UseCases\MovieOrchUseCases.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="Service References\MovieService\MovieOrchBusinessLayer.MovieService.BaseResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MovieService\MovieOrchBusinessLayer.MovieService.IdentificationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MovieService\MovieOrchBusinessLayer.MovieService.MovieListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MovieService\MovieOrchBusinessLayer.MovieService.MovieResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MovieService\MovieOrchBusinessLayer.MovieService.StakeholderListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MovieService\MovieOrchBusinessLayer.MovieService.StakeholderResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MovieService\MovieOrchBusinessLayer.MovieService.WatchlistListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MovieService\MovieOrchBusinessLayer.MovieService.WatchlistResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MovieService\MovieService.wsdl" />
+    <None Include="Service References\MovieService\MovieService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MovieService\MovieService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MovieService\MovieService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MovieService\MovieService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MovieService\MovieService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MovieService\MovieService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserService\MovieOrchBusinessLayer.UserService.AchievementListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserService\MovieOrchBusinessLayer.UserService.AchievementResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserService\MovieOrchBusinessLayer.UserService.BaseResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserService\MovieOrchBusinessLayer.UserService.ClientListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserService\MovieOrchBusinessLayer.UserService.ClientResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserService\MovieOrchBusinessLayer.UserService.IdentificationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserService\MovieOrchBusinessLayer.UserService.UserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserService\UserService.wsdl" />
+    <None Include="Service References\UserService\UserService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserService\UserService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserService\UserService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserService\UserService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="..\packages\CSLA-Core.4.6.500\analyzers\c#\Csla.Analyzers.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\MovieService\" />
+    <WCFMetadataStorage Include="Service References\UserService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MovieService\MovieService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MovieService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MovieService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MovieService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UserService\UserService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UserService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UserService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UserService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

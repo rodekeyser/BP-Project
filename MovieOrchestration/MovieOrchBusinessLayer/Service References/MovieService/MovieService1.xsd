@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:7419/MovieService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/MovieCommunicationLayer.DataContracts.Input" />
+  <xs:import schemaLocation="http://localhost:7419/MovieService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/MovieCommunicationLayer.DataContracts.Response" />
+  <xs:element name="CreateWatchlist">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/MovieCommunicationLayer.DataContracts.Input" minOccurs="0" name="input" nillable="true" type="q1:WatchlistInput" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateWatchlistResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/MovieCommunicationLayer.DataContracts.Response" minOccurs="0" name="CreateWatchlistResult" nillable="true" type="q2:IdentificationResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateMovie">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/MovieCommunicationLayer.DataContracts.Input" minOccurs="0" name="input" nillable="true" type="q3:MovieInput" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateMovieResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/MovieCommunicationLayer.DataContracts.Response" minOccurs="0" name="CreateMovieResult" nillable="true" type="q4:IdentificationResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateActor">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/MovieCommunicationLayer.DataContracts.Input" minOccurs="0" name="input" nillable="true" type="q5:StakeholderInput" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateActorResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/MovieCommunicationLayer.DataContracts.Response" minOccurs="0" name="CreateActorResult" nillable="true" type="q6:IdentificationResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateDirector">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/MovieCommunicationLayer.DataContracts.Input" minOccurs="0" name="input" nillable="true" type="q7:StakeholderInput" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateDirectorResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/MovieCommunicationLayer.DataContracts.Response" minOccurs="0" name="CreateDirectorResult" nillable="true" type="q8:IdentificationResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetWatchlistById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/MovieCommunicationLayer.DataContracts.Input" minOccurs="0" name="input" nillable="true" type="q9:IdentificationInput" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetWatchlistByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/MovieCommunicationLayer.DataContracts.Response" minOccurs="0" name="GetWatchlistByIdResult" nillable="true" type="q10:WatchlistResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMovieById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/MovieCommunicationLayer.DataContracts.Input" minOccurs="0" name="input" nillable="true" type="q11:IdentificationInput" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMovieByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/MovieCommunicationLayer.DataContracts.Response" minOccurs="0" name="GetMovieByIdResult" nillable="true" type="q12:MovieResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDirectorById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/MovieCommunicationLayer.DataContracts.Input" minOccurs="0" name="input" nillable="true" type="q13:IdentificationInput" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDirectorByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/MovieCommunicationLayer.DataContracts.Response" minOccurs="0" name="GetDirectorByIdResult" nillable="true" type="q14:StakeholderResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetActorById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/MovieCommunicationLayer.DataContracts.Input" minOccurs="0" name="input" nillable="true" type="q15:IdentificationInput" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetActorByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/MovieCommunicationLayer.DataContracts.Response" minOccurs="0" name="GetActorByIdResult" nillable="true" type="q16:StakeholderResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllWatchlistsOfUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/MovieCommunicationLayer.DataContracts.Input" minOccurs="0" name="input" nillable="true" type="q17:MultipleIdentificationsInput" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllWatchlistsOfUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/MovieCommunicationLayer.DataContracts.Response" minOccurs="0" name="GetAllWatchlistsOfUserResult" nillable="true" type="q18:WatchlistListResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllMovies">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/MovieCommunicationLayer.DataContracts.Input" minOccurs="0" name="input" nillable="true" type="q19:BaseInput" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllMoviesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/MovieCommunicationLayer.DataContracts.Response" minOccurs="0" name="GetAllMoviesResult" nillable="true" type="q20:MovieListResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllDirectors">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/MovieCommunicationLayer.DataContracts.Input" minOccurs="0" name="input" nillable="true" type="q21:BaseInput" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllDirectorsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/MovieCommunicationLayer.DataContracts.Response" minOccurs="0" name="GetAllDirectorsResult" nillable="true" type="q22:StakeholderListResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllActors">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/MovieCommunicationLayer.DataContracts.Input" minOccurs="0" name="input" nillable="true" type="q23:BaseInput" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllActorsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/MovieCommunicationLayer.DataContracts.Response" minOccurs="0" name="GetAllActorsResult" nillable="true" type="q24:StakeholderListResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteWatchlistById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/MovieCommunicationLayer.DataContracts.Input" minOccurs="0" name="input" nillable="true" type="q25:IdentificationInput" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteWatchlistByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/MovieCommunicationLayer.DataContracts.Response" minOccurs="0" name="DeleteWatchlistByIdResult" nillable="true" type="q26:BaseResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteMovieById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/MovieCommunicationLayer.DataContracts.Input" minOccurs="0" name="input" nillable="true" type="q27:IdentificationInput" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteMovieByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/MovieCommunicationLayer.DataContracts.Response" minOccurs="0" name="DeleteMovieByIdResult" nillable="true" type="q28:BaseResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteDirectorById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/MovieCommunicationLayer.DataContracts.Input" minOccurs="0" name="input" nillable="true" type="q29:IdentificationInput" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteDirectorByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/MovieCommunicationLayer.DataContracts.Response" minOccurs="0" name="DeleteDirectorByIdResult" nillable="true" type="q30:BaseResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteActorById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/MovieCommunicationLayer.DataContracts.Input" minOccurs="0" name="input" nillable="true" type="q31:IdentificationInput" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteActorByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/MovieCommunicationLayer.DataContracts.Response" minOccurs="0" name="DeleteActorByIdResult" nillable="true" type="q32:BaseResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddDirectorToMovie">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/MovieCommunicationLayer.DataContracts.Input" minOccurs="0" name="input" nillable="true" type="q33:RelationInput" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddDirectorToMovieResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/MovieCommunicationLayer.DataContracts.Response" minOccurs="0" name="AddDirectorToMovieResult" nillable="true" type="q34:MovieResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddActorToMovie">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/MovieCommunicationLayer.DataContracts.Input" minOccurs="0" name="input" nillable="true" type="q35:RelationInput" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddActorToMovieResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/MovieCommunicationLayer.DataContracts.Response" minOccurs="0" name="AddActorToMovieResult" nillable="true" type="q36:MovieResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddMovieToWatchList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/MovieCommunicationLayer.DataContracts.Input" minOccurs="0" name="input" nillable="true" type="q37:RelationInput" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddMovieToWatchListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/MovieCommunicationLayer.DataContracts.Response" minOccurs="0" name="AddMovieToWatchListResult" nillable="true" type="q38:WatchlistResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteDirectorFromMovie">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/MovieCommunicationLayer.DataContracts.Input" minOccurs="0" name="input" nillable="true" type="q39:IdentificationInput" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteDirectorFromMovieResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q40="http://schemas.datacontract.org/2004/07/MovieCommunicationLayer.DataContracts.Response" minOccurs="0" name="DeleteDirectorFromMovieResult" nillable="true" type="q40:BaseResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteActorFromMovie">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q41="http://schemas.datacontract.org/2004/07/MovieCommunicationLayer.DataContracts.Input" minOccurs="0" name="input" nillable="true" type="q41:RelationInput" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteActorFromMovieResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q42="http://schemas.datacontract.org/2004/07/MovieCommunicationLayer.DataContracts.Response" minOccurs="0" name="DeleteActorFromMovieResult" nillable="true" type="q42:BaseResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteMovieFromWatchlist">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q43="http://schemas.datacontract.org/2004/07/MovieCommunicationLayer.DataContracts.Input" minOccurs="0" name="input" nillable="true" type="q43:RelationInput" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteMovieFromWatchlistResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q44="http://schemas.datacontract.org/2004/07/MovieCommunicationLayer.DataContracts.Response" minOccurs="0" name="DeleteMovieFromWatchlistResult" nillable="true" type="q44:BaseResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateActor">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q45="http://schemas.datacontract.org/2004/07/MovieCommunicationLayer.DataContracts.Input" minOccurs="0" name="input" nillable="true" type="q45:StakeholderInput" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateActorResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q46="http://schemas.datacontract.org/2004/07/MovieCommunicationLayer.DataContracts.Response" minOccurs="0" name="UpdateActorResult" nillable="true" type="q46:StakeholderResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateWatchlist">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q47="http://schemas.datacontract.org/2004/07/MovieCommunicationLayer.DataContracts.Input" minOccurs="0" name="input" nillable="true" type="q47:WatchlistInput" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateWatchlistResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q48="http://schemas.datacontract.org/2004/07/MovieCommunicationLayer.DataContracts.Response" minOccurs="0" name="UpdateWatchlistResult" nillable="true" type="q48:WatchlistResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateDirector">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q49="http://schemas.datacontract.org/2004/07/MovieCommunicationLayer.DataContracts.Input" minOccurs="0" name="input" nillable="true" type="q49:StakeholderInput" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateDirectorResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q50="http://schemas.datacontract.org/2004/07/MovieCommunicationLayer.DataContracts.Response" minOccurs="0" name="UpdateDirectorResult" nillable="true" type="q50:StakeholderResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateMovie">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q51="http://schemas.datacontract.org/2004/07/MovieCommunicationLayer.DataContracts.Input" minOccurs="0" name="input" nillable="true" type="q51:MovieInput" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateMovieResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q52="http://schemas.datacontract.org/2004/07/MovieCommunicationLayer.DataContracts.Response" minOccurs="0" name="UpdateMovieResult" nillable="true" type="q52:MovieResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

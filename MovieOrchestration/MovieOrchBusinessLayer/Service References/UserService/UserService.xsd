@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:8562/UserService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/UserCommunicationLayer.DataContracts.Input" />
+  <xs:import schemaLocation="http://localhost:8562/UserService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/UserCommunicationLayer.DataContracts.Response" />
+  <xs:element name="CreateAchievement">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/UserCommunicationLayer.DataContracts.Input" minOccurs="0" name="input" nillable="true" type="q1:AchievementInput" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateAchievementResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/UserCommunicationLayer.DataContracts.Response" minOccurs="0" name="CreateAchievementResult" nillable="true" type="q2:IdentificationResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateAdmin">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/UserCommunicationLayer.DataContracts.Input" minOccurs="0" name="input" nillable="true" type="q3:ClientInput" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateAdminResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/UserCommunicationLayer.DataContracts.Response" minOccurs="0" name="CreateAdminResult" nillable="true" type="q4:IdentificationResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/UserCommunicationLayer.DataContracts.Input" minOccurs="0" name="input" nillable="true" type="q5:ClientInput" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/UserCommunicationLayer.DataContracts.Response" minOccurs="0" name="CreateUserResult" nillable="true" type="q6:IdentificationResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddWatchListToUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/UserCommunicationLayer.DataContracts.Input" minOccurs="0" name="input" nillable="true" type="q7:WatchlistInput" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddWatchListToUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/UserCommunicationLayer.DataContracts.Response" minOccurs="0" name="AddWatchListToUserResult" nillable="true" type="q8:IdentificationResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteAchievementById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/UserCommunicationLayer.DataContracts.Input" minOccurs="0" name="input" nillable="true" type="q9:IdentificationInput" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteAchievementByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/UserCommunicationLayer.DataContracts.Response" minOccurs="0" name="DeleteAchievementByIdResult" nillable="true" type="q10:BaseResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteAdminById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/UserCommunicationLayer.DataContracts.Input" minOccurs="0" name="input" nillable="true" type="q11:IdentificationInput" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteAdminByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/UserCommunicationLayer.DataContracts.Response" minOccurs="0" name="DeleteAdminByIdResult" nillable="true" type="q12:BaseResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteUserById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/UserCommunicationLayer.DataContracts.Input" minOccurs="0" name="input" nillable="true" type="q13:IdentificationInput" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteUserByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/UserCommunicationLayer.DataContracts.Response" minOccurs="0" name="DeleteUserByIdResult" nillable="true" type="q14:BaseResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteWatchlistById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/UserCommunicationLayer.DataContracts.Input" minOccurs="0" name="input" nillable="true" type="q15:IdentificationInput" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteWatchlistByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/UserCommunicationLayer.DataContracts.Response" minOccurs="0" name="DeleteWatchlistByIdResult" nillable="true" type="q16:BaseResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAchievementById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/UserCommunicationLayer.DataContracts.Input" minOccurs="0" name="input" nillable="true" type="q17:IdentificationInput" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAchievementByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/UserCommunicationLayer.DataContracts.Response" minOccurs="0" name="GetAchievementByIdResult" nillable="true" type="q18:AchievementResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAdminById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/UserCommunicationLayer.DataContracts.Input" minOccurs="0" name="input" nillable="true" type="q19:IdentificationInput" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAdminByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/UserCommunicationLayer.DataContracts.Response" minOccurs="0" name="GetAdminByIdResult" nillable="true" type="q20:ClientResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/UserCommunicationLayer.DataContracts.Input" minOccurs="0" name="input" nillable="true" type="q21:IdentificationInput" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/UserCommunicationLayer.DataContracts.Response" minOccurs="0" name="GetUserByIdResult" nillable="true" type="q22:UserResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllAchievements">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/UserCommunicationLayer.DataContracts.Input" minOccurs="0" name="input" nillable="true" type="q23:BaseInput" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllAchievementsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/UserCommunicationLayer.DataContracts.Response" minOccurs="0" name="GetAllAchievementsResult" nillable="true" type="q24:AchievementListResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllAdmins">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/UserCommunicationLayer.DataContracts.Input" minOccurs="0" name="input" nillable="true" type="q25:BaseInput" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllAdminsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/UserCommunicationLayer.DataContracts.Response" minOccurs="0" name="GetAllAdminsResult" nillable="true" type="q26:ClientListResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllUsers">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/UserCommunicationLayer.DataContracts.Input" minOccurs="0" name="input" nillable="true" type="q27:BaseInput" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllUsersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/UserCommunicationLayer.DataContracts.Response" minOccurs="0" name="GetAllUsersResult" nillable="true" type="q28:ClientListResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddAchievementToUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/UserCommunicationLayer.DataContracts.Input" minOccurs="0" name="input" nillable="true" type="q29:RelationsInput" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddAchievementToUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/UserCommunicationLayer.DataContracts.Response" minOccurs="0" name="AddAchievementToUserResult" nillable="true" type="q30:UserResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddFriend">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/UserCommunicationLayer.DataContracts.Input" minOccurs="0" name="input" nillable="true" type="q31:RelationsInput" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddFriendResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/UserCommunicationLayer.DataContracts.Response" minOccurs="0" name="AddFriendResult" nillable="true" type="q32:UserResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteFriend">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/UserCommunicationLayer.DataContracts.Input" minOccurs="0" name="input" nillable="true" type="q33:RelationsInput" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteFriendResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/UserCommunicationLayer.DataContracts.Response" minOccurs="0" name="DeleteFriendResult" nillable="true" type="q34:BaseResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateAchievement">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/UserCommunicationLayer.DataContracts.Input" minOccurs="0" name="input" nillable="true" type="q35:AchievementInput" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateAchievementResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/UserCommunicationLayer.DataContracts.Response" minOccurs="0" name="UpdateAchievementResult" nillable="true" type="q36:AchievementResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateAdmin">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/UserCommunicationLayer.DataContracts.Input" minOccurs="0" name="input" nillable="true" type="q37:ClientInput" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateAdminResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/UserCommunicationLayer.DataContracts.Response" minOccurs="0" name="UpdateAdminResult" nillable="true" type="q38:ClientResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/UserCommunicationLayer.DataContracts.Input" minOccurs="0" name="input" nillable="true" type="q39:ClientInput" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q40="http://schemas.datacontract.org/2004/07/UserCommunicationLayer.DataContracts.Response" minOccurs="0" name="UpdateUserResult" nillable="true" type="q40:ClientResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

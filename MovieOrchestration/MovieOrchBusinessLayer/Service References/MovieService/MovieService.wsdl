@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="MovieService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:7419/MovieService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:7419/MovieService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:7419/MovieService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/MovieCommunicationLayer.DataContracts.Input" />
+      <xsd:import schemaLocation="http://localhost:7419/MovieService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/MovieCommunicationLayer.DataContracts.Response" />
+      <xsd:import schemaLocation="http://localhost:7419/MovieService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/MovieDataLayer.Enums" />
+      <xsd:import schemaLocation="http://localhost:7419/MovieService.svc?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IMovieService_CreateWatchlist_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateWatchlist" />
+  </wsdl:message>
+  <wsdl:message name="IMovieService_CreateWatchlist_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateWatchlistResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMovieService_CreateMovie_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateMovie" />
+  </wsdl:message>
+  <wsdl:message name="IMovieService_CreateMovie_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateMovieResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMovieService_CreateActor_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateActor" />
+  </wsdl:message>
+  <wsdl:message name="IMovieService_CreateActor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateActorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMovieService_CreateDirector_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateDirector" />
+  </wsdl:message>
+  <wsdl:message name="IMovieService_CreateDirector_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateDirectorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMovieService_GetWatchlistById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWatchlistById" />
+  </wsdl:message>
+  <wsdl:message name="IMovieService_GetWatchlistById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWatchlistByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMovieService_GetMovieById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMovieById" />
+  </wsdl:message>
+  <wsdl:message name="IMovieService_GetMovieById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMovieByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMovieService_GetDirectorById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDirectorById" />
+  </wsdl:message>
+  <wsdl:message name="IMovieService_GetDirectorById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDirectorByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMovieService_GetActorById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetActorById" />
+  </wsdl:message>
+  <wsdl:message name="IMovieService_GetActorById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetActorByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMovieService_GetAllWatchlistsOfUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllWatchlistsOfUser" />
+  </wsdl:message>
+  <wsdl:message name="IMovieService_GetAllWatchlistsOfUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllWatchlistsOfUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMovieService_GetAllMovies_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllMovies" />
+  </wsdl:message>
+  <wsdl:message name="IMovieService_GetAllMovies_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllMoviesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMovieService_GetAllDirectors_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllDirectors" />
+  </wsdl:message>
+  <wsdl:message name="IMovieService_GetAllDirectors_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllDirectorsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMovieService_GetAllActors_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllActors" />
+  </wsdl:message>
+  <wsdl:message name="IMovieService_GetAllActors_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllActorsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMovieService_DeleteWatchlistById_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteWatchlistById" />
+  </wsdl:message>
+  <wsdl:message name="IMovieService_DeleteWatchlistById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteWatchlistByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMovieService_DeleteMovieById_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteMovieById" />
+  </wsdl:message>
+  <wsdl:message name="IMovieService_DeleteMovieById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteMovieByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMovieService_DeleteDirectorById_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteDirectorById" />
+  </wsdl:message>
+  <wsdl:message name="IMovieService_DeleteDirectorById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteDirectorByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMovieService_DeleteActorById_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteActorById" />
+  </wsdl:message>
+  <wsdl:message name="IMovieService_DeleteActorById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteActorByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMovieService_AddDirectorToMovie_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddDirectorToMovie" />
+  </wsdl:message>
+  <wsdl:message name="IMovieService_AddDirectorToMovie_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddDirectorToMovieResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMovieService_AddActorToMovie_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddActorToMovie" />
+  </wsdl:message>
+  <wsdl:message name="IMovieService_AddActorToMovie_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddActorToMovieResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMovieService_AddMovieToWatchList_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddMovieToWatchList" />
+  </wsdl:message>
+  <wsdl:message name="IMovieService_AddMovieToWatchList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddMovieToWatchListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMovieService_DeleteDirectorFromMovie_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteDirectorFromMovie" />
+  </wsdl:message>
+  <wsdl:message name="IMovieService_DeleteDirectorFromMovie_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteDirectorFromMovieResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMovieService_DeleteActorFromMovie_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteActorFromMovie" />
+  </wsdl:message>
+  <wsdl:message name="IMovieService_DeleteActorFromMovie_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteActorFromMovieResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMovieService_DeleteMovieFromWatchlist_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteMovieFromWatchlist" />
+  </wsdl:message>
+  <wsdl:message name="IMovieService_DeleteMovieFromWatchlist_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteMovieFromWatchlistResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMovieService_UpdateActor_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateActor" />
+  </wsdl:message>
+  <wsdl:message name="IMovieService_UpdateActor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateActorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMovieService_UpdateWatchlist_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateWatchlist" />
+  </wsdl:message>
+  <wsdl:message name="IMovieService_UpdateWatchlist_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateWatchlistResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMovieService_UpdateDirector_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDirector" />
+  </wsdl:message>
+  <wsdl:message name="IMovieService_UpdateDirector_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDirectorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMovieService_UpdateMovie_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateMovie" />
+  </wsdl:message>
+  <wsdl:message name="IMovieService_UpdateMovie_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateMovieResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IMovieService">
+    <wsdl:operation name="CreateWatchlist">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieService/CreateWatchlist" message="tns:IMovieService_CreateWatchlist_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieService/CreateWatchlistResponse" message="tns:IMovieService_CreateWatchlist_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateMovie">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieService/CreateMovie" message="tns:IMovieService_CreateMovie_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieService/CreateMovieResponse" message="tns:IMovieService_CreateMovie_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateActor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieService/CreateActor" message="tns:IMovieService_CreateActor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieService/CreateActorResponse" message="tns:IMovieService_CreateActor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateDirector">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieService/CreateDirector" message="tns:IMovieService_CreateDirector_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieService/CreateDirectorResponse" message="tns:IMovieService_CreateDirector_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWatchlistById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieService/GetWatchlistById" message="tns:IMovieService_GetWatchlistById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieService/GetWatchlistByIdResponse" message="tns:IMovieService_GetWatchlistById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMovieById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieService/GetMovieById" message="tns:IMovieService_GetMovieById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieService/GetMovieByIdResponse" message="tns:IMovieService_GetMovieById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDirectorById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieService/GetDirectorById" message="tns:IMovieService_GetDirectorById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieService/GetDirectorByIdResponse" message="tns:IMovieService_GetDirectorById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetActorById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieService/GetActorById" message="tns:IMovieService_GetActorById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieService/GetActorByIdResponse" message="tns:IMovieService_GetActorById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllWatchlistsOfUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieService/GetAllWatchlistsOfUser" message="tns:IMovieService_GetAllWatchlistsOfUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieService/GetAllWatchlistsOfUserResponse" message="tns:IMovieService_GetAllWatchlistsOfUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllMovies">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieService/GetAllMovies" message="tns:IMovieService_GetAllMovies_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieService/GetAllMoviesResponse" message="tns:IMovieService_GetAllMovies_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllDirectors">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieService/GetAllDirectors" message="tns:IMovieService_GetAllDirectors_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieService/GetAllDirectorsResponse" message="tns:IMovieService_GetAllDirectors_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllActors">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieService/GetAllActors" message="tns:IMovieService_GetAllActors_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieService/GetAllActorsResponse" message="tns:IMovieService_GetAllActors_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteWatchlistById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieService/DeleteWatchlistById" message="tns:IMovieService_DeleteWatchlistById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieService/DeleteWatchlistByIdResponse" message="tns:IMovieService_DeleteWatchlistById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMovieById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieService/DeleteMovieById" message="tns:IMovieService_DeleteMovieById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieService/DeleteMovieByIdResponse" message="tns:IMovieService_DeleteMovieById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDirectorById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieService/DeleteDirectorById" message="tns:IMovieService_DeleteDirectorById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieService/DeleteDirectorByIdResponse" message="tns:IMovieService_DeleteDirectorById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteActorById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieService/DeleteActorById" message="tns:IMovieService_DeleteActorById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieService/DeleteActorByIdResponse" message="tns:IMovieService_DeleteActorById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddDirectorToMovie">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieService/AddDirectorToMovie" message="tns:IMovieService_AddDirectorToMovie_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieService/AddDirectorToMovieResponse" message="tns:IMovieService_AddDirectorToMovie_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddActorToMovie">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieService/AddActorToMovie" message="tns:IMovieService_AddActorToMovie_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieService/AddActorToMovieResponse" message="tns:IMovieService_AddActorToMovie_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddMovieToWatchList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieService/AddMovieToWatchList" message="tns:IMovieService_AddMovieToWatchList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieService/AddMovieToWatchListResponse" message="tns:IMovieService_AddMovieToWatchList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDirectorFromMovie">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieService/DeleteDirectorFromMovie" message="tns:IMovieService_DeleteDirectorFromMovie_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieService/DeleteDirectorFromMovieResponse" message="tns:IMovieService_DeleteDirectorFromMovie_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteActorFromMovie">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieService/DeleteActorFromMovie" message="tns:IMovieService_DeleteActorFromMovie_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieService/DeleteActorFromMovieResponse" message="tns:IMovieService_DeleteActorFromMovie_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMovieFromWatchlist">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieService/DeleteMovieFromWatchlist" message="tns:IMovieService_DeleteMovieFromWatchlist_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieService/DeleteMovieFromWatchlistResponse" message="tns:IMovieService_DeleteMovieFromWatchlist_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateActor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieService/UpdateActor" message="tns:IMovieService_UpdateActor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieService/UpdateActorResponse" message="tns:IMovieService_UpdateActor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateWatchlist">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieService/UpdateWatchlist" message="tns:IMovieService_UpdateWatchlist_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieService/UpdateWatchlistResponse" message="tns:IMovieService_UpdateWatchlist_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDirector">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieService/UpdateDirector" message="tns:IMovieService_UpdateDirector_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieService/UpdateDirectorResponse" message="tns:IMovieService_UpdateDirector_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMovie">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieService/UpdateMovie" message="tns:IMovieService_UpdateMovie_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieService/UpdateMovieResponse" message="tns:IMovieService_UpdateMovie_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IMovieService" type="tns:IMovieService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CreateWatchlist">
+      <soap:operation soapAction="http://tempuri.org/IMovieService/CreateWatchlist" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateMovie">
+      <soap:operation soapAction="http://tempuri.org/IMovieService/CreateMovie" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateActor">
+      <soap:operation soapAction="http://tempuri.org/IMovieService/CreateActor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateDirector">
+      <soap:operation soapAction="http://tempuri.org/IMovieService/CreateDirector" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWatchlistById">
+      <soap:operation soapAction="http://tempuri.org/IMovieService/GetWatchlistById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMovieById">
+      <soap:operation soapAction="http://tempuri.org/IMovieService/GetMovieById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDirectorById">
+      <soap:operation soapAction="http://tempuri.org/IMovieService/GetDirectorById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetActorById">
+      <soap:operation soapAction="http://tempuri.org/IMovieService/GetActorById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllWatchlistsOfUser">
+      <soap:operation soapAction="http://tempuri.org/IMovieService/GetAllWatchlistsOfUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllMovies">
+      <soap:operation soapAction="http://tempuri.org/IMovieService/GetAllMovies" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllDirectors">
+      <soap:operation soapAction="http://tempuri.org/IMovieService/GetAllDirectors" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllActors">
+      <soap:operation soapAction="http://tempuri.org/IMovieService/GetAllActors" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteWatchlistById">
+      <soap:operation soapAction="http://tempuri.org/IMovieService/DeleteWatchlistById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMovieById">
+      <soap:operation soapAction="http://tempuri.org/IMovieService/DeleteMovieById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDirectorById">
+      <soap:operation soapAction="http://tempuri.org/IMovieService/DeleteDirectorById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteActorById">
+      <soap:operation soapAction="http://tempuri.org/IMovieService/DeleteActorById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddDirectorToMovie">
+      <soap:operation soapAction="http://tempuri.org/IMovieService/AddDirectorToMovie" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddActorToMovie">
+      <soap:operation soapAction="http://tempuri.org/IMovieService/AddActorToMovie" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddMovieToWatchList">
+      <soap:operation soapAction="http://tempuri.org/IMovieService/AddMovieToWatchList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDirectorFromMovie">
+      <soap:operation soapAction="http://tempuri.org/IMovieService/DeleteDirectorFromMovie" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteActorFromMovie">
+      <soap:operation soapAction="http://tempuri.org/IMovieService/DeleteActorFromMovie" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMovieFromWatchlist">
+      <soap:operation soapAction="http://tempuri.org/IMovieService/DeleteMovieFromWatchlist" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateActor">
+      <soap:operation soapAction="http://tempuri.org/IMovieService/UpdateActor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateWatchlist">
+      <soap:operation soapAction="http://tempuri.org/IMovieService/UpdateWatchlist" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDirector">
+      <soap:operation soapAction="http://tempuri.org/IMovieService/UpdateDirector" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMovie">
+      <soap:operation soapAction="http://tempuri.org/IMovieService/UpdateMovie" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MovieService">
+    <wsdl:port name="BasicHttpBinding_IMovieService" binding="tns:BasicHttpBinding_IMovieService">
+      <soap:address location="http://localhost:7419/MovieService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

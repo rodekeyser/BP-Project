@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/MovieCommunicationLayer.DataContracts.Response" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/MovieCommunicationLayer.DataContracts.Response" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:7419/MovieService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/MovieDataLayer.Enums" />
+  <xs:complexType name="IdentificationResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="IdentificationResponse" nillable="true" type="tns:IdentificationResponse" />
+  <xs:complexType name="BaseResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Errors" nillable="true" type="tns:ArrayOfError" />
+      <xs:element minOccurs="0" name="Succes" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BaseResponse" nillable="true" type="tns:BaseResponse" />
+  <xs:complexType name="ArrayOfError">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Error" nillable="true" type="tns:Error" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfError" nillable="true" type="tns:ArrayOfError" />
+  <xs:complexType name="Error">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PropertyName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Error" nillable="true" type="tns:Error" />
+  <xs:complexType name="WatchlistResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" type="xs:int" />
+          <xs:element minOccurs="0" name="Movies" nillable="true" type="tns:ArrayOfChildMovieResponse" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="WatchlistResponse" nillable="true" type="tns:WatchlistResponse" />
+  <xs:complexType name="ArrayOfChildMovieResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ChildMovieResponse" nillable="true" type="tns:ChildMovieResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfChildMovieResponse" nillable="true" type="tns:ArrayOfChildMovieResponse" />
+  <xs:complexType name="ChildMovieResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Cover" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/MovieDataLayer.Enums" minOccurs="0" name="Genre" type="q1:Genre" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Playtime" type="xs:int" />
+      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Year" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ChildMovieResponse" nillable="true" type="tns:ChildMovieResponse" />
+  <xs:complexType name="MovieResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Cast" nillable="true" type="tns:ArrayOfChildStakeholderResponse" />
+          <xs:element minOccurs="0" name="Cover" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Director" nillable="true" type="tns:ChildStakeholderResponse" />
+          <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/MovieDataLayer.Enums" minOccurs="0" name="Genre" type="q2:Genre" />
+          <xs:element minOccurs="0" name="Id" type="xs:int" />
+          <xs:element minOccurs="0" name="Playtime" type="xs:int" />
+          <xs:element minOccurs="0" name="Score" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Year" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MovieResponse" nillable="true" type="tns:MovieResponse" />
+  <xs:complexType name="ArrayOfChildStakeholderResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ChildStakeholderResponse" nillable="true" type="tns:ChildStakeholderResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfChildStakeholderResponse" nillable="true" type="tns:ArrayOfChildStakeholderResponse" />
+  <xs:complexType name="ChildStakeholderResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CharacterName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FamilyName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ChildStakeholderResponse" nillable="true" type="tns:ChildStakeholderResponse" />
+  <xs:complexType name="StakeholderResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Age" type="xs:int" />
+          <xs:element minOccurs="0" name="CountOscars" type="xs:int" />
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FamilyName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Id" type="xs:int" />
+          <xs:element minOccurs="0" name="Movies" nillable="true" type="tns:ArrayOfChildMovieResponse" />
+          <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/MovieDataLayer.Enums" minOccurs="0" name="Sex" type="q3:Sex" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="StakeholderResponse" nillable="true" type="tns:StakeholderResponse" />
+  <xs:complexType name="WatchlistListResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Watchlists" nillable="true" type="tns:ArrayOfWatchlistResponse" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="WatchlistListResponse" nillable="true" type="tns:WatchlistListResponse" />
+  <xs:complexType name="ArrayOfWatchlistResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="WatchlistResponse" nillable="true" type="tns:WatchlistResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfWatchlistResponse" nillable="true" type="tns:ArrayOfWatchlistResponse" />
+  <xs:complexType name="MovieListResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Movies" nillable="true" type="tns:ArrayOfChildMovieResponse" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MovieListResponse" nillable="true" type="tns:MovieListResponse" />
+  <xs:complexType name="StakeholderListResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Stakeholders" nillable="true" type="tns:ArrayOfChildStakeholderResponse" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="StakeholderListResponse" nillable="true" type="tns:StakeholderListResponse" />
+</xs:schema>

@@ -1,0 +1,10 @@
+C:\Users\rdekeyser\Documents\Visual Studio 2015\Projects\HandleUser\UserDataLayer\bin\Debug\UserDataLayer.dll.config
+C:\Users\rdekeyser\Documents\Visual Studio 2015\Projects\HandleUser\UserDataLayer\bin\Debug\UserDataLayer.dll
+C:\Users\rdekeyser\Documents\Visual Studio 2015\Projects\HandleUser\UserDataLayer\bin\Debug\UserDataLayer.pdb
+C:\Users\rdekeyser\Documents\Visual Studio 2015\Projects\HandleUser\UserDataLayer\bin\Debug\EntityFramework.dll
+C:\Users\rdekeyser\Documents\Visual Studio 2015\Projects\HandleUser\UserDataLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\rdekeyser\Documents\Visual Studio 2015\Projects\HandleUser\UserDataLayer\bin\Debug\EntityFramework.xml
+C:\Users\rdekeyser\Documents\Visual Studio 2015\Projects\HandleUser\UserDataLayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\rdekeyser\Documents\Visual Studio 2015\Projects\HandleUser\UserDataLayer\obj\Debug\UserDataLayer.csprojResolveAssemblyReference.cache
+C:\Users\rdekeyser\Documents\Visual Studio 2015\Projects\HandleUser\UserDataLayer\obj\Debug\UserDataLayer.dll
+C:\Users\rdekeyser\Documents\Visual Studio 2015\Projects\HandleUser\UserDataLayer\obj\Debug\UserDataLayer.pdb

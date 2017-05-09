@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/MovieCommunicationLayer.DataContracts.Input" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/MovieCommunicationLayer.DataContracts.Input" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:7419/MovieService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/MovieDataLayer.Enums" />
+  <xs:import schemaLocation="http://localhost:7419/MovieService.svc?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="WatchlistInput">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseInput">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" type="xs:int" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="WatchlistInput" nillable="true" type="tns:WatchlistInput" />
+  <xs:complexType name="BaseInput">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Application" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BaseInput" nillable="true" type="tns:BaseInput" />
+  <xs:complexType name="MovieInput">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseInput">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Cover" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/MovieDataLayer.Enums" minOccurs="0" name="Genre" type="q1:Genre" />
+          <xs:element minOccurs="0" name="Id" type="xs:int" />
+          <xs:element minOccurs="0" name="Playtime" type="xs:int" />
+          <xs:element minOccurs="0" name="Score" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Year" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MovieInput" nillable="true" type="tns:MovieInput" />
+  <xs:complexType name="StakeholderInput">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseInput">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Age" type="xs:int" />
+          <xs:element minOccurs="0" name="CountOscars" type="xs:int" />
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FamilyName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Id" type="xs:int" />
+          <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/MovieDataLayer.Enums" minOccurs="0" name="Sex" type="q2:Sex" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="StakeholderInput" nillable="true" type="tns:StakeholderInput" />
+  <xs:complexType name="IdentificationInput">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseInput">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="IdentificationInput" nillable="true" type="tns:IdentificationInput" />
+  <xs:complexType name="MultipleIdentificationsInput">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseInput">
+        <xs:sequence>
+          <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Ids" nillable="true" type="q3:ArrayOfint" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MultipleIdentificationsInput" nillable="true" type="tns:MultipleIdentificationsInput" />
+  <xs:complexType name="RelationInput">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseInput">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CharacterName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ChildId" type="xs:int" />
+          <xs:element minOccurs="0" name="ParentId" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RelationInput" nillable="true" type="tns:RelationInput" />
+</xs:schema>
