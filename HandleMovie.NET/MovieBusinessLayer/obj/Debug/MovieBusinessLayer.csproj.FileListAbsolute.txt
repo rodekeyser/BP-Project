@@ -1,0 +1,12 @@
+C:\Users\rdekeyser\Documents\Visual Studio 2015\Projects\HandleMovie.NET\MovieBusinessLayer\bin\Debug\MovieBusinessLayer.dll.config
+C:\Users\rdekeyser\Documents\Visual Studio 2015\Projects\HandleMovie.NET\MovieBusinessLayer\bin\Debug\MovieBusinessLayer.dll
+C:\Users\rdekeyser\Documents\Visual Studio 2015\Projects\HandleMovie.NET\MovieBusinessLayer\bin\Debug\MovieBusinessLayer.pdb
+C:\Users\rdekeyser\Documents\Visual Studio 2015\Projects\HandleMovie.NET\MovieBusinessLayer\bin\Debug\EntityFramework.dll
+C:\Users\rdekeyser\Documents\Visual Studio 2015\Projects\HandleMovie.NET\MovieBusinessLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\rdekeyser\Documents\Visual Studio 2015\Projects\HandleMovie.NET\MovieBusinessLayer\bin\Debug\MovieDataLayer.dll
+C:\Users\rdekeyser\Documents\Visual Studio 2015\Projects\HandleMovie.NET\MovieBusinessLayer\bin\Debug\MovieDataLayer.pdb
+C:\Users\rdekeyser\Documents\Visual Studio 2015\Projects\HandleMovie.NET\MovieBusinessLayer\bin\Debug\EntityFramework.xml
+C:\Users\rdekeyser\Documents\Visual Studio 2015\Projects\HandleMovie.NET\MovieBusinessLayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\rdekeyser\Documents\Visual Studio 2015\Projects\HandleMovie.NET\MovieBusinessLayer\obj\Debug\MovieBusinessLayer.csprojResolveAssemblyReference.cache
+C:\Users\rdekeyser\Documents\Visual Studio 2015\Projects\HandleMovie.NET\MovieBusinessLayer\obj\Debug\MovieBusinessLayer.dll
+C:\Users\rdekeyser\Documents\Visual Studio 2015\Projects\HandleMovie.NET\MovieBusinessLayer\obj\Debug\MovieBusinessLayer.pdb

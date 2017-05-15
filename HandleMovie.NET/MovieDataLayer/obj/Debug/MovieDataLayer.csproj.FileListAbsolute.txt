@@ -1,0 +1,10 @@
+C:\Users\rdekeyser\Documents\Visual Studio 2015\Projects\HandleMovie.NET\MovieDataLayer\bin\Debug\MovieDataLayer.dll.config
+C:\Users\rdekeyser\Documents\Visual Studio 2015\Projects\HandleMovie.NET\MovieDataLayer\bin\Debug\MovieDataLayer.dll
+C:\Users\rdekeyser\Documents\Visual Studio 2015\Projects\HandleMovie.NET\MovieDataLayer\bin\Debug\MovieDataLayer.pdb
+C:\Users\rdekeyser\Documents\Visual Studio 2015\Projects\HandleMovie.NET\MovieDataLayer\bin\Debug\EntityFramework.dll
+C:\Users\rdekeyser\Documents\Visual Studio 2015\Projects\HandleMovie.NET\MovieDataLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\rdekeyser\Documents\Visual Studio 2015\Projects\HandleMovie.NET\MovieDataLayer\bin\Debug\EntityFramework.xml
+C:\Users\rdekeyser\Documents\Visual Studio 2015\Projects\HandleMovie.NET\MovieDataLayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\rdekeyser\Documents\Visual Studio 2015\Projects\HandleMovie.NET\MovieDataLayer\obj\Debug\MovieDataLayer.csprojResolveAssemblyReference.cache
+C:\Users\rdekeyser\Documents\Visual Studio 2015\Projects\HandleMovie.NET\MovieDataLayer\obj\Debug\MovieDataLayer.dll
+C:\Users\rdekeyser\Documents\Visual Studio 2015\Projects\HandleMovie.NET\MovieDataLayer\obj\Debug\MovieDataLayer.pdb
